@@ -133,31 +133,13 @@ Actual Dog (100)      21          79        Actual Dog (100)      31          69
 
 Ensure you execute commands from inside the `CNN/` folder using **Python 3.12** (where TensorFlow is installed):
 
-```powershell
-cd "c:\Users\bg695\Desktop\COE Projects\AICEO\CNN"
-```
-
-### Option 1: Run the Complete Training Pipeline
-```powershell
-& "C:\Users\bg695\AppData\Local\Programs\Python\Python312\python.exe" main.py
-```
-
----
-
 ## 7. User-Upload Image Prediction (`predict.py`)
 
 A standalone, modular inference script [`predict.py`](predict.py) supports uploading custom images, selecting files through native Windows Explorer dialogs, or testing sample images.
 
 ### Method A: Native File Browser Dialog (Click & Upload)
 Pops open the Windows Explorer dialog so you can choose any `.jpg` / `.png`:
-```powershell
-& "C:\Users\bg695\AppData\Local\Programs\Python\Python312\python.exe" predict.py --upload
-```
 
-### Method B: Interactive Terminal Menu
-```powershell
-& "C:\Users\bg695\AppData\Local\Programs\Python\Python312\python.exe" predict.py
-```
 Provides an interactive menu:
 ```text
 --------------------------------------------------
@@ -170,16 +152,8 @@ Provides an interactive menu:
 --------------------------------------------------
 ```
 
-### Method C: Pass Image Path Direct via CLI
-```powershell
-& "C:\Users\bg695\AppData\Local\Programs\Python\Python312\python.exe" predict.py "path/to/your_image.jpg"
-```
-
 ### Method D: Display Visual Popup Window (`--show-plot`)
 Displays the image alongside the predicted class and confidence:
-```powershell
-& "C:\Users\bg695\AppData\Local\Programs\Python\Python312\python.exe" predict.py "path/to/your_image.jpg" --show-plot
-```
 
 ### Sample Output:
 ```text
