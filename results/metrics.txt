@@ -1,0 +1,38 @@
+CNN DOG-CAT CLASSIFICATION METRICS REPORT (IMPROVED MODEL)
+============================================================
+Architecture: 3-Layer CNN (Conv 32->64->128) + Data Aug + Flatten + Dense(128, L2=1e-4) + Dropout(0.4) + Dense(1)
+Parameters: 3,304,769 | Training Duration: 417.32s
+
+Training Accuracy:   81.75%  (Loss: 0.4165)
+Validation Accuracy: 78.50%  (Loss: 0.5028)
+Optimal Val Threshold: 0.40
+
+TEST EVALUATION ON UNSEEN DATA (N=200):
+  Standard Threshold (0.50):
+    Test Accuracy:     76.50% (153/200 correct, 47 errors)
+    Test Loss:         0.5629
+    Test Precision:    81.18%
+    Test Recall:       69.00%
+    Test F1-Score:     0.7459
+    Confusion Matrix:
+[[84 16]
+ [31 69]]
+
+  Calibrated Threshold (0.40):
+    Test Accuracy:     72.00% (144/200 correct, 56 errors)
+    Test Precision:    70.37%
+    Test Recall:       76.00%
+    Test F1-Score:     0.7308
+    Confusion Matrix:
+[[68 32]
+ [24 76]]
+
+Classification Report (Threshold 0.50):
+              precision    recall  f1-score   support
+
+         Cat     0.7304    0.8400    0.7814       100
+         Dog     0.8118    0.6900    0.7459       100
+
+    accuracy                         0.7650       200
+   macro avg     0.7711    0.7650    0.7637       200
+weighted avg     0.7711    0.7650    0.7637       200
